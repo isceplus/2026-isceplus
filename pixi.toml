@@ -1,0 +1,52 @@
+[workspace]
+authors = ["segallagher <segallagher@alaska.edu>", "Alex-Lewandowski <aflewandowski@alaska.edu>"]
+channels = ["conda-forge", "pyrocko"]
+name = "earthscope_insar"
+platforms = ["linux-64", "osx-64"]
+version = "0.1.0"
+
+[dependencies]
+python = ">=3.10,<3.12"
+setuptools = "<60"
+wheel = "*"
+
+aria-tools = "*"
+asf_search = "*"
+autorift = "*"
+boto3 = "*"
+hyp3_sdk = "*"
+ipykernel = "*"
+ipympl = "*"
+isce2 = "*"
+libgdal-hdf5 = "*"
+libgdal-netcdf = "*"
+mintpy = ">=1.6.4"
+netcdf4 = "*"
+pip = "*"
+pv = "*"
+pyrocko = "*"
+sardem = "*"
+rioxarray = "*"
+rasterio = "*"
+sentineleof = "*"
+numpy = ">=1.24.0"
+compass = "*"
+isce3 = "*"
+snaphu = "*"
+burst2safe = "*"
+whirlwind-insar = ">=0.8.0"
+dolphin = "*"
+jupyterlab = ">=4.6.3,<5"
+
+[pypi-dependencies]
+url-widget = "*"
+okada-wrapper = "==18.12.7.3"
+kite = "*"
+burst-db = { git = "https://github.com/opera-adt/burst_db.git" }
+
+[pypi-options]
+no-build-isolation = ["okada-wrapper"]
+
+[tasks]
+register-kernel = "python -m ipykernel install --user --name iscePlus --display-name 'iscePlus'"
+lab = { cmd = "jupyter lab", depends-on = ["register-kernel"] }
