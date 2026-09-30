@@ -1,7 +1,7 @@
 [workspace]
 authors = ["segallagher <segallagher@alaska.edu>", "Alex-Lewandowski <aflewandowski@alaska.edu>"]
 channels = ["conda-forge", "pyrocko"]
-name = "earthscope_insar"
+name = "iscePlus"
 platforms = ["linux-64", "osx-64"]
 version = "0.1.0"
 
