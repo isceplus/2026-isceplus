@@ -8,3 +8,6 @@ environment.yml
 # Python bytecode cache
 __pycache__/
 *.pyc
+# pixi environments
+.pixi/*
+!.pixi/config.toml
